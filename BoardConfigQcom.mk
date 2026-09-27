@@ -315,7 +315,7 @@ ifneq ($(filter $(UM_6_1_FAMILY) $(UM_6_6_FAMILY) $(UM_6_12_FAMILY),$(TARGET_BOA
 endif
 
 # Set composer version to v3_4 for UM_6_12_FAMILY
-ifeq ($(filter $(UM_6_12_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+ifneq ($(filter $(UM_6_12_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     SOONG_CONFIG_qtidisplay_composer_version := v3_4
 endif
 
